@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psoriasis Care Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #8E44AD;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #8E44AD;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .tips, .treatments, .advice {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .tips div, .treatments div, .advice div {
+            flex: 1 1 calc(33% - 20px);
+            background: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 20px;
+            background-color: #8E44AD;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Psoriasis Care Guide</h1>
+    </header>
+    <div class="container">
+        <!-- Image Section -->
+        <div class="section">
+            <h2>What is Psoriasis?</h2>
+            <p>Psoriasis is an autoimmune condition that causes skin cells to build up rapidly, forming scales and dry patches. Below is an image to help you identify psoriasis:</p>
+            <img src="https://via.placeholder.com/800x400" alt="Psoriasis symptoms">
+        </div>
+        <!-- Tips Section -->
+        <div class="section tips">
+            <h2>Tips for Managing Psoriasis</h2>
+            <div>
+                <h3>Moisturize Regularly</h3>
+                <p>Use thick, fragrance-free moisturizers to help reduce dryness and itching.</p>
+            </div>
+            <div>
+                <h3>Manage Stress</h3>
+                <p>Practice stress management techniques such as meditation or yoga, as stress can trigger flare-ups.</p>
+            </div>
+            <div>
+                <h3>Avoid Triggers</h3>
+                <p>Identify and avoid common triggers like cold weather, smoking, or certain medications.</p>
+            </div>
+        </div>
+        <!-- Treatments Section -->
+        <div class="section treatments">
+            <h2>Treatment Options</h2>
+            <div>
+                <h3>Topical Treatments</h3>
+                <p>Apply corticosteroid creams or vitamin D analogs to help reduce symptoms.</p>
+            </div>
+            <div>
+                <h3>Phototherapy</h3>
+                <p>Light therapy using ultraviolet (UV) light can help reduce scaling and inflammation.</p>
+            </div>
+            <div>
+                <h3>Systemic Treatments</h3>
+                <p>For severe cases, doctors may recommend oral medications or biologics to suppress the immune response.</p>
+            </div>
+        </div>
+        <!-- Advice Section -->
+        <div class="section advice">
+            <h2>General Advice</h2>
+            <div>
+                <h3>Maintain a Healthy Diet</h3>
+                <p>Eat foods rich in antioxidants, such as fruits and vegetables, and avoid inflammatory foods like processed meats.</p>
+            </div>
+            <div>
+                <h3>Stay Hydrated</h3>
+                <p>Drinking plenty of water helps keep your skin hydrated and promotes overall health.</p>
+            </div>
+            <div>
+                <h3>Consult a Dermatologist</h3>
+                <p>If your psoriasis worsens or affects your quality of life, seek professional advice for advanced treatments.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Psoriasis Care Guide. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

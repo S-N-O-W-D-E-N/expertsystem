@@ -1,0 +1,79 @@
+% Eczema Knowledge Base
+% Rules for diagnosis and management of eczema types.
+
+% Initial Symptom Assessment
+rule(1, "Initial Symptom Check", 
+    if [symptom(red_skin), symptom(dry_skin), symptom(itchy_skin)]
+    then [proceed_to(step_2)]).
+
+rule(2, "Persistent or Relapsing Condition", 
+    if [symptom(chronic_or_recurrent)]
+    then [proceed_to(step_3)]
+    else [diagnosis("Other conditions should be considered")]).
+
+% Step 2: Location and Distribution
+rule(3, "Atopic Dermatitis Location",
+    if [symptom(location(flexural))]
+    then [diagnosis("Atopic Dermatitis")]).
+
+rule(4, "Contact Dermatitis Trigger",
+    if [symptom(triggered_by(exposure_to_substance))]
+    then [diagnosis("Contact Dermatitis")]).
+
+rule(5, "Dyshidrotic Eczema Location",
+    if [symptom(blisters_on(hands_feet))]
+    then [diagnosis("Dyshidrotic Eczema")]).
+
+rule(6, "Nummular Eczema Shape",
+    if [symptom(lesions(coin_shaped))]
+    then [diagnosis("Nummular Eczema")]).
+
+rule(7, "Seborrheic Dermatitis Appearance",
+    if [symptom(flaky_skin), symptom(greasy_yellow_scales)]
+    then [diagnosis("Seborrheic Dermatitis")]).
+
+rule(8, "Stasis Dermatitis Location and Swelling",
+    if [symptom(location(lower_legs)), symptom(associated_with(swelling))]
+    then [diagnosis("Stasis Dermatitis")]).
+
+rule(9, "Neurodermatitis Trigger",
+    if [symptom(localized_itching), symptom(triggered_by(stress))]
+    then [diagnosis("Neurodermatitis")]).
+
+% Step 3: Additional Factors
+rule(10, "Age and Family History for Atopic Dermatitis",
+    if [symptom(age_under(5)), symptom(family_history(allergies))]
+    then [diagnosis("Atopic Dermatitis")]).
+
+rule(11, "Trigger Avoidance",
+    if [symptom(triggered_by(environmental_factors))]
+    then [diagnosis("Environmental Triggered Eczema")]).
+
+% Differential Diagnosis
+rule(12, "Psoriasis vs Eczema",
+    if [symptom(silvery_scaling)]
+    then [diagnosis("Psoriasis")]
+    else [proceed_to(evaluate_for("Eczema"))]).
+
+rule(13, "Fungal Infection vs Eczema",
+    if [symptom(well_defined_infected_area)]
+    then [diagnosis("Fungal Infection")]
+    else [proceed_to(evaluate_for("Eczema"))]).
+
+% Treatment Plan
+rule(14, "Atopic Dermatitis Treatment",
+    if [diagnosis("Atopic Dermatitis")]
+    then [action("Apply topical corticosteroids"), action("Use moisturizers"), action("Manage itching with antihistamines")]).
+
+rule(15, "Contact Dermatitis Treatment",
+    if [diagnosis("Contact Dermatitis")]
+    then [action("Avoid irritants/allergens"), action("Apply topical steroids")]).
+
+rule(16, "Seborrheic Dermatitis Treatment",
+    if [diagnosis("Seborrheic Dermatitis")]
+    then [action("Use medicated shampoos"), action("Apply topical antifungals")]).
+
+% Follow-Up
+rule(17, "Follow-Up Recommendations",
+    if [diagnosis(_)]
+    then [action("Monitor progress"), action("Adjust treatment as needed"), action("Provide patient education")]).
